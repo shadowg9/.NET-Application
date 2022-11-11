@@ -1,0 +1,29 @@
+﻿@model Category
+
+<form method="post" asp-action="Delete">
+	<input asp-for="Id" hidden />
+	<div class="border p-3 mt-4">
+		<h2>Delete Item</h2>
+	</div>
+	
+	<div class="mb-3">
+		<label asp-for="Item">Item Name</label>
+		<input asp-for="Item" disabled class="form-control" />
+		
+	</div>
+	<div class="mb-3">
+		<label asp-for="Amount">Item Amount</label>
+		<input asp-for="Amount" disabled class="form-control" />
+		
+	</div>
+	<div class="mb-3">
+		<label asp-for="Cost">Item Cost</label>
+		<input asp-for="Cost" disabled class="form-control" />
+		
+	</div>
+	<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+	<a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">
+		Back to List
+	</a> 
+</form>
+

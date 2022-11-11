@@ -1,0 +1,28 @@
+﻿@model Category
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<h2>Add Item</h2>
+	</div>
+	<div asp-validation-summary="All"></div>
+	<div class="mb-3">
+		<label asp-for="Item">Item Name</label>
+		<input asp-for="Item" class="form-control" />
+		<span asp-validation-for="Item" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Amount">Item Amount</label>
+		<input asp-for="Amount" class="form-control" />
+		<span asp-validation-for="Amount" class="text-danger"></span>
+	</div>
+	<div class="mb-3">
+		<label asp-for="Cost">Item Cost</label>
+		<input asp-for="Cost" class="form-control" />
+		<span asp-validation-for="Cost" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary style="width:15px">Create</button>
+	<a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">
+		Back to List
+	</a>
+</form>
+
